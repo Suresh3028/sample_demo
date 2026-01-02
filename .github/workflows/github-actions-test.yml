@@ -1,0 +1,16 @@
+name: GitHub Actions Force Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run test command
+        run: echo "Runner detected and working"
