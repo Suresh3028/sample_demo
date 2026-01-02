@@ -1,20 +1,13 @@
-name: CI Pipeline
+name: CI Test
 
 on:
   push:
     branches:
-      - main
-  pull_request:
+      - master
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Run basic command
-        run: |
-          echo "GitHub Actions is working!"
-          ls -la
+      - uses: actions/checkout@v4
+      - run: echo "GitHub Actions detected successfully"
